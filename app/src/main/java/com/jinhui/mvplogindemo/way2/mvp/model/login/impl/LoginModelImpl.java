@@ -20,7 +20,7 @@ public class LoginModelImpl implements LoginModel {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                     if(name.equals("zxc") && password.equals("123")){
                         User user = new User();
                         user.setName(name);

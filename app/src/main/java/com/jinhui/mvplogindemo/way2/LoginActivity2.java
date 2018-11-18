@@ -22,7 +22,7 @@ import butterknife.OnClick;
  * Created by jh on 2018/9/25.
  * Email: 1004260403@qq.com
  *
- * 方式二
+ * 方式二 mvp模式
  */
 public class LoginActivity2 extends AppCompatActivity implements LoginView {
 

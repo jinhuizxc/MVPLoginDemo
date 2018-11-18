@@ -18,7 +18,7 @@ import butterknife.OnClick;
  * Created by jh on 2018/9/25.
  * Email: 1004260403@qq.com
  *
- * 方式三
+ * 方式三 mvp的封装
  */
 public class LoginActivity3 extends BaseActivity<LoginPresenter, LoginModel> implements LoginContract.View {
 

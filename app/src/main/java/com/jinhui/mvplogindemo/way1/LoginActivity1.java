@@ -20,7 +20,7 @@ import butterknife.OnClick;
  * Email: 1004260403@qq.com
  * Created by jinhui on 2018/11/18.
  * <p>
- * 方式一
+ * 方式一，并没有model层，mvc模式
  */
 public class LoginActivity1 extends AppCompatActivity implements LoginView {
 
