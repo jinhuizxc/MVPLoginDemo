@@ -10,7 +10,9 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.jinhui.mvplogindemo.R;
-import com.jinhui.mvplogindemo.way2.presenter.LoginPresenter;
+import com.jinhui.mvplogindemo.way2.bean.User;
+import com.jinhui.mvplogindemo.way2.mvp.presenter.LoginPresenter;
+import com.jinhui.mvplogindemo.way2.mvp.view.LoginView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

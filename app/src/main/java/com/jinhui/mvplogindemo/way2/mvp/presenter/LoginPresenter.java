@@ -1,12 +1,12 @@
-package com.jinhui.mvplogindemo.way2.presenter;
+package com.jinhui.mvplogindemo.way2.mvp.presenter;
 
 import android.os.Handler;
 
-import com.jinhui.mvplogindemo.way2.LoginView;
-import com.jinhui.mvplogindemo.way2.User;
+import com.jinhui.mvplogindemo.way2.mvp.view.LoginView;
+import com.jinhui.mvplogindemo.way2.bean.User;
 import com.jinhui.mvplogindemo.way2.listener.OnLoginListener;
-import com.jinhui.mvplogindemo.way2.presenter.impl.LoginPresenterImpl;
-import com.jinhui.mvplogindemo.way2.user.UserView;
+import com.jinhui.mvplogindemo.way2.mvp.model.login.impl.LoginModelImpl;
+import com.jinhui.mvplogindemo.way2.mvp.model.login.LoginModel;
 
 /**
  * Created by jh on 2018/9/25.
@@ -15,13 +15,14 @@ import com.jinhui.mvplogindemo.way2.user.UserView;
 public class LoginPresenter {
 
     private Handler handler = new Handler();
+
     LoginView loginView;
 
-    UserView userView;
+    LoginModel loginModel;
 
     public LoginPresenter(LoginView loginView) {
         this.loginView = loginView;
-        userView = new LoginPresenterImpl();
+        loginModel = new LoginModelImpl();
     }
 
     public void login() {
@@ -29,7 +30,7 @@ public class LoginPresenter {
         loginView.showLoading();
         //加载进度条属于耗时操作
         //想要显示登录成功与失败的方法在有结果后给于反馈！这个login指向UserBizImpl中的方法
-        userView.login(loginView.getName(), loginView.getPassword(), new OnLoginListener() {
+        loginModel.login(loginView.getName(), loginView.getPassword(), new OnLoginListener() {
             @Override
             public void success(final User user) {
 //                Log.e(TAG, "UserPresenter login");

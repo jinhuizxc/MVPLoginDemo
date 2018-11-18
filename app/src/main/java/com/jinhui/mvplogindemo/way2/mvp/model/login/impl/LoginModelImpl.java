@@ -1,14 +1,14 @@
-package com.jinhui.mvplogindemo.way2.presenter.impl;
+package com.jinhui.mvplogindemo.way2.mvp.model.login.impl;
 
-import com.jinhui.mvplogindemo.way2.User;
+import com.jinhui.mvplogindemo.way2.bean.User;
 import com.jinhui.mvplogindemo.way2.listener.OnLoginListener;
-import com.jinhui.mvplogindemo.way2.user.UserView;
+import com.jinhui.mvplogindemo.way2.mvp.model.login.LoginModel;
 
 /**
  * Created by jh on 2018/9/25.
  * Email: 1004260403@qq.com
  */
-public class LoginPresenterImpl implements UserView {
+public class LoginModelImpl implements LoginModel {
 
 
     // 对用户名与密码进行判断
@@ -24,7 +24,7 @@ public class LoginPresenterImpl implements UserView {
                     if(name.equals("zxc") && password.equals("123")){
                         User user = new User();
                         user.setName(name);
-                        user.setPasswprd(password);
+                        user.setPassword(password);
                         loginListener.success(user);
                     }else{
                         loginListener.fail("登录失败");

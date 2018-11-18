@@ -1,4 +1,6 @@
-package com.jinhui.mvplogindemo.way2;
+package com.jinhui.mvplogindemo.way2.mvp.view;
+
+import com.jinhui.mvplogindemo.way2.bean.User;
 
 /**
  * Created by jh on 2018/9/25.

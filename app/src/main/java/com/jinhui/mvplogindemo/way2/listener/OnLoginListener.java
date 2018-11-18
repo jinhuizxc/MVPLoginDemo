@@ -1,6 +1,6 @@
 package com.jinhui.mvplogindemo.way2.listener;
 
-import com.jinhui.mvplogindemo.way2.User;
+import com.jinhui.mvplogindemo.way2.bean.User;
 
 /**
  * Created by jh on 2018/9/25.

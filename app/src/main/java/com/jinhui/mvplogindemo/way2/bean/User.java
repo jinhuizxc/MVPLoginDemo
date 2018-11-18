@@ -1,4 +1,4 @@
-package com.jinhui.mvplogindemo.way2;
+package com.jinhui.mvplogindemo.way2.bean;
 
 /**
  * 作者：jinhui on 2017/3/27
@@ -8,7 +8,7 @@ package com.jinhui.mvplogindemo.way2;
 public class User {
 
     private String name;
-    private String passwprd;
+    private String password;
 
     public String getName() {
         return name;
@@ -18,11 +18,11 @@ public class User {
         this.name = name;
     }
 
-    public String getPasswprd() {
-        return passwprd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswprd(String passwprd) {
-        this.passwprd = passwprd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
