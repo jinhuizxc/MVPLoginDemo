@@ -27,7 +27,7 @@ public interface LoginContract {
     }
 
     public interface Model extends BaseModel {
-
+        void getTest();  // test方法
     }
 
     public class Presenter extends BasePresenter<View, Model> {

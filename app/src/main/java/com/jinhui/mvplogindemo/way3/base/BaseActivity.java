@@ -12,9 +12,9 @@ import com.jinhui.mvplogindemo.way3.utils.TUtil;
  * Created by jh on 2018/9/20.
  * Email: 1004260403@qq.com
  */
-public abstract class BaseActivity<T extends BasePresenter, M extends BaseModel> extends AppCompatActivity {
+public abstract class BaseActivity<P extends BasePresenter, M extends BaseModel> extends AppCompatActivity {
 
-    protected T mPresenter;
+    protected P mPresenter;
     protected M mModel;
     public Context mContext;
 

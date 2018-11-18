@@ -6,13 +6,13 @@ import android.content.Context;
  * Created by jh on 2018/9/20.
  * Email: 1004260403@qq.com
  */
-public class BasePresenter<T, M> {
+public class BasePresenter<V, M> {
 
-    public T mView;
+    public V mView;
     public M mModel;
     public Context mContext;
 
-    public void setVM(T mView, M mModel) {
+    public void setVM(V mView, M mModel) {
         this.mView = mView;
         this.mModel = mModel;
     }
