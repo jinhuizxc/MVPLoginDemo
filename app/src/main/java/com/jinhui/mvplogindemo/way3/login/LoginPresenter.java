@@ -12,26 +12,26 @@ public class LoginPresenter extends LoginContract.Presenter{
 
     public void login(String loginName, String loginPassWord) {
 
-        mModel.getList();
-//        mView.showLoading();
-//        if (loginName.equals("zxc") && loginPassWord.equals("123")){
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    mView.hideLoading();
-//                    mView.showMsg("登录成功");
-//                }
-//            }, 2000);
-//        }else {
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    mView.hideLoading();
-//                    mView.showErrorMsg("用户名或者密码错误");
-//
-//                }
-//            }, 2000);
-//        }
+        mModel.getTest(); // test()
+        mView.showLoading();
+        if (loginName.equals("zxc") && loginPassWord.equals("123")){
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mView.hideLoading();
+                    mView.showMsg("登录成功");
+                }
+            }, 2000);
+        }else {
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mView.hideLoading();
+                    mView.showErrorMsg("用户名或者密码错误");
+
+                }
+            }, 2000);
+        }
     }
 
     public void clear() {
