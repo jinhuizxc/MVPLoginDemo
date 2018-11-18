@@ -12,12 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="方式一"/>
-
     <Button
         android:id="@+id/bt_login2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="方式二"/>
+
+    <Button
+        android:id="@+id/bt_login3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方式三"/>
 
 
 

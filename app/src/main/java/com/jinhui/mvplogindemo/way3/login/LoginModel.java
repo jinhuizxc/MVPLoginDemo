@@ -1,4 +1,4 @@
-package com.jinhui.mvplogindemo.mvp2.login;
+package com.jinhui.mvplogindemo.way3.login;
 
 /**
  * Created by jh on 2018/9/20.

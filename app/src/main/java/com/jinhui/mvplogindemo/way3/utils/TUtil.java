@@ -1,4 +1,4 @@
-package com.jinhui.mvplogindemo.mvp2.utils;
+package com.jinhui.mvplogindemo.way3.utils;
 
 import java.lang.reflect.ParameterizedType;
 

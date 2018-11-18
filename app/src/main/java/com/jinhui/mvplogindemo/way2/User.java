@@ -1,4 +1,4 @@
-package com.jinhui.mvplogindemo.mvp1;
+package com.jinhui.mvplogindemo.way2;
 
 /**
  * 作者：jinhui on 2017/3/27

@@ -1,4 +1,4 @@
-package com.jinhui.mvplogindemo.mvp2.base;
+package com.jinhui.mvplogindemo.way3.base;
 
 import android.content.Context;
 

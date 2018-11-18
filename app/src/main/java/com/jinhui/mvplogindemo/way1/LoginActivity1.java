@@ -1,25 +1,28 @@
-package com.jinhui.mvplogindemo.mvp2.login;
+package com.jinhui.mvplogindemo.way1;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.jinhui.mvplogindemo.R;
-import com.jinhui.mvplogindemo.mvp2.base.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by jh on 2018/9/25.
  * Email: 1004260403@qq.com
+ * Created by jinhui on 2018/11/18.
+ * <p>
+ * 方式一
  */
-public class LoginActivity1 extends BaseActivity<LoginPresenter, LoginModel> implements LoginContract.View {
-
+public class LoginActivity1 extends AppCompatActivity implements LoginView {
 
     @BindView(R.id.etName)
     EditText etName;
@@ -31,26 +34,29 @@ public class LoginActivity1 extends BaseActivity<LoginPresenter, LoginModel> imp
     Button btClear;
     @BindView(R.id.pb)
     ProgressBar pb;
+    @BindView(R.id.activity_user_login)
+    LinearLayout activityUserLogin;
+    private LoginPresenter loginPresenter;
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.activity_login;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
+
+        loginPresenter = new LoginPresenter(this);
     }
 
     @Override
-    public void initView() {
-
+    public void loginSuccess(String msg) {
+        Toast.makeText(this,
+                msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void initPresenter() {
-        mPresenter.setVM(this, mModel);
-    }
-
-
-    @Override
-    public void showMsg(String str) {
-        Toast.makeText(mContext, str, Toast.LENGTH_SHORT).show();
+    public void loginFail(String msg) {
+        Toast.makeText(this,
+                msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -70,33 +76,18 @@ public class LoginActivity1 extends BaseActivity<LoginPresenter, LoginModel> imp
 
     @Override
     public void hideLoading() {
-        pb.setVisibility(View.INVISIBLE);
-    }
-
-    @Override
-    public void showErrorMsg(String str) {
-        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
+        pb.setVisibility(View.GONE);
     }
 
     @OnClick({R.id.bt_login, R.id.bt_clear})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_login:
-                String loginName = etName.getText().toString();
-                String loginPassWord = etPassword.getText().toString();
-                // 开始登录
-                mPresenter.login(loginName, loginPassWord);
+                loginPresenter.loginRequest(etName.getText().toString(), etPassword.getText().toString());
                 break;
             case R.id.bt_clear:
-                mPresenter.clear();
+                loginPresenter.clear();
                 break;
         }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 }

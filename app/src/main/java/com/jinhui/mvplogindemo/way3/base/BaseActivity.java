@@ -1,11 +1,11 @@
-package com.jinhui.mvplogindemo.mvp2.base;
+package com.jinhui.mvplogindemo.way3.base;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.jinhui.mvplogindemo.mvp2.utils.TUtil;
+import com.jinhui.mvplogindemo.way3.utils.TUtil;
 
 
 /**

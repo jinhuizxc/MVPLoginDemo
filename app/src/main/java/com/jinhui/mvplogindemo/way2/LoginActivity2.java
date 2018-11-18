@@ -1,4 +1,4 @@
-package com.jinhui.mvplogindemo.mvp1;
+package com.jinhui.mvplogindemo.way2;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.jinhui.mvplogindemo.R;
-import com.jinhui.mvplogindemo.mvp1.presenter.LoginPresenter;
+import com.jinhui.mvplogindemo.way2.presenter.LoginPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,8 +19,10 @@ import butterknife.OnClick;
 /**
  * Created by jh on 2018/9/25.
  * Email: 1004260403@qq.com
+ *
+ * 方式二
  */
-public class LoginActivity extends AppCompatActivity implements LoginView {
+public class LoginActivity2 extends AppCompatActivity implements LoginView {
 
     @BindView(R.id.etName)
     EditText etName;

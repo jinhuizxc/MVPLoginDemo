@@ -1,14 +1,12 @@
-package com.jinhui.mvplogindemo.mvp1.presenter;
+package com.jinhui.mvplogindemo.way2.presenter;
 
 import android.os.Handler;
-import android.util.Log;
 
-import com.jinhui.mvplogindemo.mvp1.LoginActivity;
-import com.jinhui.mvplogindemo.mvp1.LoginView;
-import com.jinhui.mvplogindemo.mvp1.User;
-import com.jinhui.mvplogindemo.mvp1.listener.OnLoginListener;
-import com.jinhui.mvplogindemo.mvp1.presenter.impl.LoginPresenterImpl;
-import com.jinhui.mvplogindemo.mvp1.user.UserView;
+import com.jinhui.mvplogindemo.way2.LoginView;
+import com.jinhui.mvplogindemo.way2.User;
+import com.jinhui.mvplogindemo.way2.listener.OnLoginListener;
+import com.jinhui.mvplogindemo.way2.presenter.impl.LoginPresenterImpl;
+import com.jinhui.mvplogindemo.way2.user.UserView;
 
 /**
  * Created by jh on 2018/9/25.

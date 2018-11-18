@@ -1,7 +1,6 @@
-package com.jinhui.mvplogindemo.mvp2.login;
+package com.jinhui.mvplogindemo.way3.login;
 
 import android.os.Handler;
-import android.widget.Toast;
 
 /**
  * Created by jh on 2018/9/20.

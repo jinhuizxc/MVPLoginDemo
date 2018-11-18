@@ -1,9 +1,9 @@
-package com.jinhui.mvplogindemo.mvp2.login;
+package com.jinhui.mvplogindemo.way3.login;
 
 
-import com.jinhui.mvplogindemo.mvp2.base.BaseModel;
-import com.jinhui.mvplogindemo.mvp2.base.BasePresenter;
-import com.jinhui.mvplogindemo.mvp2.base.BaseView;
+import com.jinhui.mvplogindemo.way3.base.BaseModel;
+import com.jinhui.mvplogindemo.way3.base.BasePresenter;
+import com.jinhui.mvplogindemo.way3.base.BaseView;
 
 /**
  * Created by jh on 2018/9/20.
